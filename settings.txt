@@ -1,0 +1,52 @@
+1. folder generate
+
+mkdir CVA
+cd CVA
+code .
+
+├─data/
+│  ├─raw/
+│  ├─processed/
+│  └─external/
+├─notebooks/
+├─src/
+│  ├─data/
+│  ├─models/
+│  ├─training/
+│  ├─inference/
+│  └─utils/
+├─experiments/
+├─outputs/
+│  ├─figures/
+│  ├─checkpoints/
+│  └─logs/
+├─configs/
+├─tests/
+│
+├─requirements.txt
+├─.gitignore
+└─README.md
+
+2. Virtual Environment
+
+py -m venv .venv
+    Ctrl + Shift + P
+    Python: Select Interpreter
+    .venv
+
+3. Package Install
+
+pip install numpy pandas matplotlib scikit-learn
+pip install jupyter ipykernel
+pip install pyyaml tqdm
+requirements.txt
+    numpy
+    pandas
+    matplotlib
+    scikit-learn
+    torch
+    torchvision
+    opencv-learn
+    pydicom
+    nibabel
+    tqdm
