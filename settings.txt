@@ -67,6 +67,10 @@ git push -u origin main
 5. Colab Settings
 
 (cell 1)
+from google.colab import drive
+drive.mount('/content/drive)
+
+(cell 2)
 import torch
 
 print(torch.__version__)
@@ -74,11 +78,13 @@ print(torch.cuda.is_available())
 
 !nvidia-smi
 
-(cell 2)
-from google.colab import drive
-drive.mount('/content/drive)
+
 
 (cell 3)
 !git clone https://github.com/colab-HS/CVA
 %cd CVA
 !pip install -r requirements.txt
+
+(cell 4)
+import wandb
+wandb.login()
