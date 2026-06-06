@@ -8,3 +8,5 @@ opencv-python
 pydicom
 nibabel
 tqdm
+wandb
+jupyter

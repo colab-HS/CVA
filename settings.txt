@@ -34,7 +34,7 @@ py -m venv .venv
     Python: Select Interpreter
     .venv
 
-3. Package Install
+3. Package Install (in .venv)
 
 pip install numpy pandas matplotlib scikit-learn
 pip install jupyter ipykernel
@@ -50,3 +50,35 @@ requirements.txt
     pydicom
     nibabel
     tqdm
+Colab
+    !pip install -r requirements.txt
+
+4. Github Settings
+
+(Local)
+git init
+git add .
+git commit -m "Initial setup"
+
+git remote add origin https://github.com/colab-HS/CVA
+git branch -M main
+git push -u origin main
+
+5. Colab Settings
+
+(cell 1)
+import torch
+
+print(torch.__version__)
+print(torch.cuda.is_available())
+
+!nvidia-smi
+
+(cell 2)
+from google.colab import drive
+drive.mount('/content/drive)
+
+(cell 3)
+!git clone https://github.com/colab-HS/CVA
+%cd CVA
+!pip install -r requirements.txt
